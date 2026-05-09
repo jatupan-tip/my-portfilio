@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div class="top">
+        <div class="top-bar">
+            <div class="menu-btn">
+                &#9776;
+            </div>
+
+            <div class="top-title">
+                My Portfolio
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <h3>Content</h3>
+        <div class="content-menu">
+            <div class="content-btn">
+                <a href="#preface">Preface</a>
+            </div>
+            <div class="content-btn">
+                <a href="#profile">Profile</a>
+            </div>
+            <div class="content-btn">
+                <a href="#education">Education</a>
+            </div>
+            <div class="content-btn">
+                <a href="#transcript">Transcript</a>
+            </div>
+            <div class="content-btn">
+                <a href="#experience">Experience</a>
+            </div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <h3>Contact</h3>
+            <div class="contact">
+                <div class="contact-box">
+                    <div class="phone-icon"></div>
+                    <p>0946374124</p>
+                </div>
+                <div class="contact-box">
+                    <div class="mail-icon"></div>
+                    <p>jatupan.tip@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Preface -->
+    <div class="preface" id="preface">
+        <div class="preface-title">
+            <p style="text-indent: 30px;">
+                I'm passionate about software development and
+                design, as I believe that well-designed software can
+                make people's lives easier. This portfolio summarizes
+                the experiences and projects I have gained throughout
+                my academic journey. Although I'm a recent graduate
+                with limited professional work experience, I'm eager to
+                embrace new challenges and continuously improve my
+                skills. I hope this portfolio will reflect my potential and
+                determination as I begin my career as a Software Engineering.
+            </p>
+            <div class="preface-name">
+                <p>Jatupan Tiptem</p>
+            </div>
+        </div>
+        
+        <div class="preface-img"></div>
+    </div>
+
+    <!-- Profile -->
+    <div class="main">
+        <div class="page" id="profile">
+            <div class="section-title">
+                <span>Profile</span>
+            </div>
+
+            <div class="profile-box">
+
+                <div class="box-main">
+
+                    <!-- Profile Image -->
+                    <div class="box-img">
+                        <div class="profile-img"></div>
+                    </div>
+
+                    <!-- About Me -->
+                    <div class="box-title">
+                        <h4>About Me</h4>
+                        <p style="text-indent: 30px;">
+                            Highly motivated recent graduate with
+                            a strong foundational knowledge in Full
+                            Stack Development, specializing in Java
+                            (Spring Boot) and modern JavaScript
+                            frameworks. Demonstrated ability to
+                            quickly design, develop, and debug robust
+                            web applications and mobile prototypes
+                            (Flutter). Eager to apply problem-solving
+                            skills and continuous learning aptitude to
+                            contribute immediately to challenging
+                            development projects.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="box-main">
+
+                    <!-- Personal Data -->
+                    <div class="box-title">
+                        <h4>Personal Data</h4>
+                        <div class="box-data">
+                            <div class="box-detail">
+                                <p style="text-indent: 20px;">Name:</p>
+                                <p style="text-indent: 20px;">Nickname:</p>
+                                <p style="text-indent: 20px;">Age:</p>
+                                <p style="text-indent: 20px;">Date of birth:</p>
+                                <p style="text-indent: 20px;">Nationality:</p>
+                                <p style="text-indent: 20px;">Race:</p>
+                                <p style="text-indent: 20px;">Religion:</p>
+                            </div>
+                            <div class="box-detail">
+                                <p class="name"></p>
+                                <p class="nickname"></p>
+                                <p class="age"></p>
+                                <p class="birthDate"></p>
+                                <p class="nationality"></p>
+                                <p class="race"></p>
+                                <p class="religion"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="box-title">
+                        <h4>Social Media</h4>
+                        <div class="icon-box">
+                            <div class="icon">
+                                <a href="https://www.facebook.com/jatupan.t" class="fb-icon" target="_blank"
+                                    aria-label="Facebook"></a>
+                                <p class="icon-name">Jatupan Tiptem</p>
+                            </div>
+                            <div class="icon">
+                                <a href="https://www.instagram.com/jatupan.t" class="ig-icon" target="_blank"
+                                    aria-label="Instagram"></a>
+                                <p class="icon-name">jatupan.t</p>
+                            </div>
+                            <div class="icon">
+                                <div class="ln-icon" aria-label="Line" id="openLineQR"></div>
+                                <p class="icon-name">PETCH</p>
+                            </div>
+                            <div class="icon">
+                                <a href="https://github.com/jatupan-tip" class="git-icon" target="_blank"
+                                    aria-label="Git"></a>
+                                <p class="icon-name">jatupan-tip</p>
+                            </div>
+                            <!-- QR Line -->
+                            <div class="qr-modal" id="lineQR">
+                                <div class="qr-backdrop"></div>
+                                <div class="qr-content">
+                                    <img src="/img/qr-line.jpg" alt="Line QR Code">
+                                    <button class="qr-close" id="closeLineQR">&times;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="main">
+        <div class="page" id="education">
+            <div class="section-title">
+                <span>Education</span>
+            </div>
+            <div class="education-box">
+
+                <!-- College -->
+                <div class="timeline-item">
+                    <div class="year">
+                        <span class="college-timeline"></span>
+                    </div>
+                    <div class="line">
+                        <span class="dot"></span>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <div class="college-logo"></div>
+                        </div>
+                        <div class="content-detail">
+                            <h4 class="college-name"></h4>
+                            <p class="college-faculty"></p>
+                            <p class="college-major"></p>
+                            <p class="college-gpa"></p>
+                            <p class="college-year-complete"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School -->
+                <div class="timeline-item">
+                    <div class="year">
+                        <span class="school-timeline"></span>
+                    </div>
+                    <div class="line">
+                        <span class="dot"></span>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <div class="school-logo"></div>
+                        </div>
+                        <div class="content-detail">
+                            <h4 class="school-name"></h4>
+                            <p class="school-plan"></p>
+                            <p class="school-gpa"></p>
+                            <p class="school-year-complete"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <!-- Transcript -->
+        <div class="page" id="transcript">
+            <div class="section-title">
+                <span>Transcript</span>
+            </div>
+            <div class="transcript-box">
+                <iframe src="file/transcript_eng.pdf" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <!-- Experience -->
+        <div class="page" id="experience">
+            <div class="section-title">
+                <span>Experience</span>
+            </div>
+            <div class="experience-content">
+                <!-- Training(T) -->
+                <div class="exp">
+                    <h4>Training</h4>
+
+                    <!-- T1 -->
+                    <div class="exp-box">
+                        <div class="exp-header">
+                            <h5>Faculty Training Programs(ICT)</h5>
+                            <p>University of Phayao</p>
+                            <div class="view-detail">
+                                <span class="exp-hint">view detail</span>
+                                <span class="exp-arrow">▼</span>
+                            </div>
+                        </div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Writing a Web Application</li>
+                                <li>Mobile Application Development</li>
+                                <li>
+                                    Understanding Differences,
+                                    Self Development, and Team Development
+                                    Towards Success.
+                                </li>
+                                <li>UX/UI Design and Web Design”</li>
+                                <li>Full Stack Development”</li>
+                            </ul>
+                            <div class="training-box-img">
+                                <div class="training-img-1"></div>
+                                <div class="training-img-2"></div>
+                                <div class="training-img-3"></div>
+                            </div>
+                            <button class="close-btn">close</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Work Experience(WE) -->
+                <div class="exp">
+                    <h4>Work Experience</h4>
+
+                    <!-- WE1 -->
+                    <div class="exp-box">
+                        <div class="exp-header">
+                            <h5>Java Developer(Co-op Intern)</h5>
+                            <p>Freewill Solution co., ltd.</p>
+                            <div class="view-detail">
+                                <span class="exp-hint">view detail</span>
+                                <span class="exp-arrow">▼</span>
+                            </div>
+                        </div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>
+                                    Engineered a full-stack web-based personnel management
+                                    system utilizing Java(Spring Boot) for the backend and
+                                    JavaScript for the frontend interface.
+                                </li>
+                                <li>
+                                    Managed databases and queries with HeidiSQL.
+                                </li>
+                                <li>
+                                    Resolved critical performance bottlenecks and bugs on
+                                    both backend(Java) and frontend(JavaScript) systems,
+                                    ensuring system stability prior to UAT.
+                                </li>
+                            </ul>
+                            <div class="intern-box-img">
+                                <div class="intern-img-1">
+                                    <iframe src="file/cer-co-op.pdf" width="100%" height="100%"></iframe>
+                                </div>
+                                <div class="intern-img-2"></div>
+                                <div class="intern-img-3"></div>
+                            </div>
+                            <button class="close-btn">close</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Project(P) -->
+                <div class="exp">
+                    <h4>Project</h4>
+
+                    <!-- P1 -->
+                    <div class="exp-box">
+                        <div class="exp-header">
+                            <h5>
+                                Mobile Application for Memory Enhancement for Alzheimer’s Patients
+                            </h5>
+                            <p>Capstone Project</p>
+                            <div class="view-detail">
+                                <span class="exp-hint">view detail</span>
+                                <span class="exp-arrow">▼</span>
+                            </div>
+                        </div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Role: Developer, UX/UI Designer</li>
+                                <li>
+                                    Technology Stack: Flutter/Dart, Figma, Android Studio, HeidiSQL
+                                </li>
+                                <li>
+                                    Contribution: Designed and prototyped the entire user
+                                    experience(UX) and interface(UI) using Figma, resulting in a
+                                    high-fidelity mock-up approved by the project advisor.
+                                </li>
+                                <li>
+                                    Development: Developed a fully functional cross-platform
+                                    memory training application prototype using Flutter,
+                                    demonstrating core features for patient assistance.
+                                </li>
+                            </ul>
+                            <div class="app-box-img">
+                                <div class="app-img-1"></div>
+                                <div class="app-img-2"></div>
+                                <div class="app-img-3"></div>
+                            </div>
+                            <!-- Main -->
+                            <div class="func-box">
+                                <h6>Main</h6>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-1"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Minigame -->
+                            <div class="func-box">
+                                <h6>Minigame</h6>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-3"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-4"></div>
+                                    </div>
+                                </div>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-5"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-6"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Notification -->
+                            <div class="func-box">
+                                <h6>Notification</h6>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-7"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-8"></div>
+                                    </div>
+                                </div>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-9"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-10"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Map -->
+                            <div class="func-box">
+                                <h6>Map</h6>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-11"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-12"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Appointment -->
+                            <div class="func-box">
+                                <h6>Appointment</h6>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-13"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-14"></div>
+                                    </div>
+                                </div>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-15"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Picture -->
+                            <div class="func-box">
+                                <h6>Picture</h6>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-16"></div>
+                                    </div>
+                                    <div class="phone-screen">
+                                        <div class="func-img-17"></div>
+                                    </div>
+                                </div>
+                                <div class="phone-box">
+                                    <div class="phone-screen">
+                                        <div class="func-img-18"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="close-btn">close</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>
