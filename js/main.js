@@ -75,33 +75,44 @@ document.querySelector(".school-year-complete").textContent = `Year of completio
 
 // Experience Box show detail
 document.querySelectorAll(".exp-box").forEach(box => {
+
     const header = box.querySelector(".exp-header");
     const detail = box.querySelector(".exp-detail");
     const closeBtn = box.querySelector(".close-btn");
+
     // open / close
     header.addEventListener("click", () => {
         if (box.classList.contains("active")) {
-            detail.style.height = detail.scrollHeight + "px";
-            requestAnimationFrame(() => {
-                detail.style.height = "0px";
-            });
+            detail.style.maxHeight = "0px";
+            box.classList.remove("active");
         } else {
-            detail.style.height = detail.scrollHeight + "px";
+            detail.style.maxHeight = detail.scrollHeight + "px";
+            box.classList.add("active");
         }
-        box.classList.toggle("active");
     });
-    // close botton
-    closeBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        detail.style.height = detail.scrollHeight + "px";
-        requestAnimationFrame(() => {
-            detail.style.height = "0px";
+
+    // close button
+    if (closeBtn) {
+        closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            detail.style.maxHeight = "0px";
+            box.classList.remove("active");
+            // scroll back to header
+            header.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         });
-        box.classList.remove("active");
-        // scroll back to header
-        header.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+    }
+});
+
+window.addEventListener("resize", () => {
+
+    document.querySelectorAll(".exp-box.active").forEach(box => {
+
+        const detail = box.querySelector(".exp-detail");
+
+        detail.style.maxHeight = detail.scrollHeight + "px";
     });
+
 });

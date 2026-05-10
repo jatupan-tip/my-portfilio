@@ -124,32 +124,40 @@ body {
     margin-top: auto;
     margin-bottom: 10px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .contact-box {
     width: 100%;
     box-sizing: border-box;
-    gap: 10px;
+    gap: 5px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .contact-box p {
+    box-sizing: border-box;
     margin: 10px 0;
-    font-size: 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
 }
 
 .phone-icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
     background: url("img/phone.png") center/cover no-repeat;
     transition: all 0.3s ease;
     box-shadow: 0 5px 5px -1px var(--shadow);
 }
 
 .mail-icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
     background: url("img/mail.png") center/cover no-repeat;
     transition: all 0.3s ease;
     box-shadow: 0 5px 5px -1px var(--shadow);
@@ -201,6 +209,7 @@ body {
     align-items: flex-end;
 }
 
+/* =================== Page =================== */
 .main {
     position: relative;
     width: 100%;
@@ -334,23 +343,36 @@ body {
 
 .icon-box {
     width: 100%;
-    margin: 10px auto 20px;
-    box-sizing: border-box;
-    gap: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
-
-.icon-name {
-    display: none;
+    margin: 10px auto 20px;
 }
 
 .icon {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    gap: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icon-img {
     width: 40px;
     height: 40px;
     transition: all 0.3s ease;
     box-shadow: 0 5px 5px -1px var(--shadow);
+}
+
+.icon-name {
+    display: block;
+}
+
+.icon-name p {
+    margin: 0;
 }
 
 /* Facebook Icon */
@@ -447,7 +469,7 @@ body {
 
 .timeline-item {
     display: grid;
-    grid-template-columns: 100px 20px 1fr;
+    grid-template-columns: 30% 10% 1fr;
     align-items: flex-start;
     margin-bottom: 40px;
 }
@@ -456,6 +478,9 @@ body {
     text-align: left;
     font-size: 16px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .line {
@@ -544,7 +569,7 @@ body {
     font-size: 16px;
 }
 
-/* =================== Education =================== */
+/* =================== Transcript =================== */
 .transcript-box {
     aspect-ratio: 210 / 297;
     width: 100%;
@@ -576,7 +601,7 @@ body {
 
 .exp-box {
     width: 100%;
-    padding: 10px 20px 0;
+    padding: 10px 20px;
     background: rgba(255, 255, 255, 0.18);
     box-sizing: border-box;
     border-radius: 10px;
@@ -625,12 +650,12 @@ body {
 
 .exp-detail {
     transform: translateY(-10px);
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: height 0.4s ease;
+    transition: max-height 0.4s ease;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .close-btn {
@@ -921,26 +946,13 @@ li {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===================== */
+/* =============================================== */
 /* Mobile แนวนอน */
 
 @media screen and (min-width: 0px) and (max-width: 767px) and (orientation: landscape) {
-    body {
+    /* body {
         background: lightseagreen;
-    }
+    } */
 
     /* =================== Side Bar =================== */
     .content-menu {
@@ -987,20 +999,16 @@ li {
         flex-direction: column;
         height: 100%;
         align-items: center;
-        padding: 40px;
-        box-sizing: border-box;
-    }
-
-    .preface-name {
-        margin-top: auto;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        align-self: flex-end;
+        justify-content: center;
+        padding: 30px;
     }
 
     .preface-title p {
         font-size: 14px;
+    }
+
+    .preface-name {
+        width: 100%;
     }
 
     .preface-img::before {
@@ -1030,24 +1038,266 @@ li {
         height: 20%;
         background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
     }
+
+    /* =================== Section =================== */
+    .section-title span {
+        font-size: 36px;
+    }
+
+    /* =================== Profile =================== */
+    .profile {
+        padding: 0 50px;
+    }
+
+    .profile-box {
+        margin-top: 20px;
+    }
+
+    .box-main {
+        display: flex;
+    }
+
+    .box-img {
+        padding: 30px;
+        border-radius: 60px;
+    }
+
+    .box-title {
+        padding: 30px;
+    }
+
+    .box-title h4 {
+        font-size: 24px;
+    }
+
+    .box-title p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .box-data {
+        width: 100%;
+        padding: 16px 0 0;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .box-detail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .box-detail p {
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .icon-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .icon {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .icon-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon-name {
+        display: block;
+    }
+
+    .icon-name p {
+        margin: 0;
+    }
+
+    /* =================== Education =================== */
+    .education-box {
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 40% 10% 1fr;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    .year {
+        text-align: left;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .line {
+        position: relative;
+        width: 3px;
+        background: white;
+        height: 100%;
+    }
+
+    .line::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        bottom: -40px;
+        left: 50%;
+        width: 3px;
+        transform: translateX(-50%);
+        background: white;
+    }
+
+    .dot {
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 50%;
+    }
+
+    .content {
+        width: 100%;
+        min-width: 0;
+        background: rgba(255, 255, 255, 0.18);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 15px 10px -8px black;
+    }
+
+    .content-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        padding: 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+        background: white;
+    }
+
+    .college-logo {
+        width: 100%;
+        height: 100%;
+        background: url("img/logo_up.png") center/contain no-repeat;
+        box-sizing: border-box;
+        background-clip: content-box;
+        border-radius: 10px;
+    }
+
+    .school-logo {
+        width: 100%;
+        height: 100%;
+        background: url("img/logo_dekdee.png") center/cover no-repeat;
+        box-sizing: border-box;
+        background-clip: content-box;
+        border-radius: 10px;
+    }
+
+    .content-detail {
+        padding: 10px;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .content-detail h4 {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .content-detail p {
+        margin: 0 10px 10px;
+        font-size: 16px;
+    }
+
+    /* =================== Transcript =================== */
+    .transcript-box {
+        aspect-ratio: 210 / 297;
+        margin-top: 20px;
+    }
+
+    /* =================== Experience =================== */
+    .experience-content {
+        margin-top: 20px;
+    }
 }
 
-/* ===================== */
+
+
+
+
+/* =============================================== */
 /* Tablet แนวตั้ง */
 
 @media (min-width: 540px) and (max-width: 1024px) and (orientation: portrait) {
-    body {
+    /* body {
         background: lightsalmon;
+    } */
+
+    /* =================== Side Bar =================== */
+    .sidebar {
+        padding: 30px 30px;
     }
 
-    /* =================== Top Bar =================== */
-    .menu-btn {
-        font-size: 30px;
-        margin-right: 20px;
+    .sidebar h3 {
+        font-size: 36px;
     }
 
-    .top-title {
-        font-size: 32px;
+    .content-menu {
+        gap: 10px;
+    }
+
+    .content-btn {
+        padding: 20px;
+        border-radius: 40px;
+    }
+
+    .content-btn a {
+        font-size: 24px;
+    }
+
+    .contact-box {
+        width: 100%;
+        box-sizing: border-box;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-box p {
+        font-size: 18px;
+    }
+
+    .phone-icon,
+    .mail-icon {
+        width: 30px;
+        height: 30px;
     }
 
     /* =================== Preface =================== */
@@ -1056,21 +1306,25 @@ li {
     }
 
     .preface-title p {
-        font-size: 24px;
+        font-size: 26px;
     }
 
-    /* =================== Profile =================== */
+    .page {
+        padding: 0 50px 20px;
+    }
+
+    /* =================== Section =================== */
     .section-title {
         margin: 50px 0 30px;
     }
 
     .section-title::before,
     .section-title::after {
-        height: 2px;
+        height: 3px;
     }
 
     .section-title span {
-        font-size: 52px;
+        font-size: 56px;
     }
 
     /* =================== Profile =================== */
@@ -1092,11 +1346,11 @@ li {
     }
 
     .box-title h4 {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .box-title p {
-        font-size: 28px;
+        font-size: 26px;
         margin: 20px 0 40px;
     }
 
@@ -1109,16 +1363,91 @@ li {
         line-height: 1.4;
     }
 
-    /* =================== Social Media =================== */
-    .icon-box {
-        margin: 20px 20px 40px;
+    .icon {
+        gap: 30px;
     }
 
-    .icon {
+    .icon-img {
         width: 60px;
         height: 60px;
     }
+
+    .icon-name {
+        display: block;
+    }
+
+    .icon-name p {
+        margin: 0;
+    }
+
+    /* =================== Education =================== */
+    .timeline-item {
+        grid-template-columns: 30% 10% 1fr;
+    }
+
+    .year {
+        font-size: 24px;
+    }
+
+    .line {
+        width: 3px;
+    }
+
+    .line::before {
+        width: 3px;
+    }
+
+    .dot {
+        width: 20px;
+        height: 20px;
+    }
+
+    .content-detail h4 {
+        font-size: 24px;
+    }
+
+    .content-detail p {
+        font-size: 20px;
+    }
+
+    /* =================== Experience =================== */
+    .exp h4 {
+        font-size: 40px;
+    }
+
+    .exp-hint {
+        font-size: 20px;
+    }
+
+    .exp-arrow {
+        font-size: 18px;
+    }
+
+    .close-btn {
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        font-size: 24px;
+    }
+
+    .exp-box h6 {
+        font-size: 24px;
+    }
+
+    .exp-box h5 {
+        font-size: 24px;
+    }
+
+    .exp-box p {
+        font-size: 24px;
+    }
+
+    ul {
+        font-size: 24px;
+    }
 }
+
+
+
+
 
 /* ===================== */
 /* Tablet แนวนอน */
@@ -1179,6 +1508,10 @@ li {
         display: flex;
     }
 }
+
+
+
+
 
 /* ===================== */
 /* Desktop (มากกว่า 1024px) */

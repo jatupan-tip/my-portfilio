@@ -1,7 +1,7 @@
 export const college = {
     name: "University of Phayao",
-    faculty: "School of Information and Communication Technology(ICT)",
-    major: "Computer Engineering(B.Eng)",
+    faculty: "School of Information and Communication Technology (ICT)",
+    major: " B.Eng. (Computer Engineering)",
     gpa: 2.32,
     year_of_completion: 2024,
     timeline: "2021-2025",
